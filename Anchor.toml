@@ -1,5 +1,5 @@
 [programs.localnet]
-messengerapp = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+messengerapp = "HRpsXxxBkx8KTwyr7JZ2Ty5dovpZAWMQE9o3Usn5vDsu"
 
 [registry]
 url = "https://anchor.projectserum.com"
@@ -9,4 +9,4 @@ cluster = "localnet"
 wallet = "/Users/mehul/.config/solana/id.json"
 
 [scripts]
-test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.js"
+test = "npm test"
