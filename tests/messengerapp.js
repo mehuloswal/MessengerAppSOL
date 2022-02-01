@@ -5,9 +5,9 @@ const { SystemProgram } = anchor.web3;
 describe("Testing our messaging app", () => {
   const provider = anchor.Provider.env();
   anchor.setProvider(provider);
-  const program = anchor.workspace.messengerapp;
+  const program = anchor.workspace.Messengerapp;
+  const baseAccount = anchor.web3.Keypair.generate();
   it("An account is initialized", async () => {
-    const baseAccount = anchor.web3.Keypair.generate();
     await program.rpc.initialize("My first message", {
       accounts: {
         baseAccount: baseAccount.publicKey,
@@ -23,7 +23,7 @@ describe("Testing our messaging app", () => {
     assert.ok(account.data === "My first message");
     _baseAccount = baseAccount;
   });
-  const baseAccount = _baseAccount;
+  // const baseAccount = _baseAccount;
   it("Update the account previously created: ", async () => {
     await program.rpc.update("My second message", {
       accounts: {

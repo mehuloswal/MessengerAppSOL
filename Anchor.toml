@@ -9,4 +9,4 @@ cluster = "localnet"
 wallet = "/Users/mehul/.config/solana/id.json"
 
 [scripts]
-test = "npm test"
+test = "npx mocha -t 1000000 tests/"
